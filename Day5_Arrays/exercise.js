@@ -31,7 +31,7 @@ const countries = [
 
   const mixedDataTypes = ['String',2,true,null,{"name":"John"},[1,2,3,4,5]];
 
-  const itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']; export {itCompanies};
+  const itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']; ;
   console.log(itCompanies);
   console.log(itCompanies.length);
   console.log(itCompanies[0]," ",itCompanies[(itCompanies.length-1)/2]," ",itCompanies[itCompanies.length-1]);
