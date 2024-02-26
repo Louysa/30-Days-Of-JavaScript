@@ -1,4 +1,5 @@
-const countries = [
+
+    const countries = [
     'Albania',
     'Bolivia',
     'Canada',
@@ -52,11 +53,11 @@ const countries = [
                 randomIntegers.push(value);
          }
     }
-    console.log(randomIntegers);
+        console.log(randomIntegers);
 
-let randomId = '';
-let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-for (let i = 0; i < 6; i++) {
-    randomId += characters.charAt(Math.floor(Math.random() * characters.length));
-}
-console.log(randomId);
+    let randomId = '';
+    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    for (let i = 0; i < 6; i++) {
+        randomId += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    console.log(randomId);

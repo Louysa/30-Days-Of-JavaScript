@@ -1,3 +1,5 @@
+
+
 const countries = [
     'Albania',
     'Bolivia',
@@ -32,3 +34,7 @@ for (let i = 0; i < bigArray.length; i++) {
         console.log(bigArray[i]);
     }
 }
+
+
+
+
