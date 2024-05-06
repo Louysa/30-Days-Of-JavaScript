@@ -1,0 +1,54 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Number Genearator</title>
+  </head>
+  <body>
+    <script>
+
+        // Create a div container on HTML document and create 100 to 100 numbers dynamically and append to the container div.
+
+        //Even numbers background is green
+        //Odd numbers background is yellow
+        //Prime numbers background is red
+
+        let numberElement;
+        for (let i = 0; i < 100; i++) {
+            numberElement = document.createElement('div');
+            numberElement.textContent = i;
+            numberElement.style.display = 'inline-block';
+            numberElement.style.width = '50px';
+            numberElement.style.height = '50px';
+            numberElement.style.textAlign = 'center';
+            numberElement.style.margin = '5px';
+            numberElement.style.border = '1px solid black';
+            if (i % 2 === 0) {
+                numberElement.style.backgroundColor = 'green';
+            } else {
+                if(i === 0 || i === 1) {
+                    numberElement.style.backgroundColor = 'yellow';
+                } else {
+                    let isPrime = true;
+                    for (let j = 2; j < i; j++) {
+                        if (i % j === 0) {
+                            isPrime = false;
+                            break;
+                        }
+                    }
+                    if (isPrime) {
+                        numberElement.style.backgroundColor = 'red';
+                    } else {
+                        numberElement.style.backgroundColor = 'yellow';
+                    }
+                }
+            }
+            document.body.appendChild(numberElement); 
+        }
+    </script>
+    
+    
+  </body>
+
+</html>
