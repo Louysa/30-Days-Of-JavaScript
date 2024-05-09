@@ -1,0 +1,87 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Number Genearator</title>
+  </head>
+  <body>
+    <script>
+        // Container for input and button
+        const inputContainer = document.createElement('div');
+        document.body.appendChild(inputContainer);
+    
+        // Input field
+        const inputNumber = document.createElement('input');
+        inputNumber.type = 'number';
+        inputNumber.placeholder = 'Enter a number';
+        inputNumber.style.display = 'block';
+        inputNumber.style.margin = '10px';
+        inputContainer.appendChild(inputNumber);
+    
+        // Generate button
+        const generateButton = document.createElement('button');
+        generateButton.textContent = 'Generate Numbers';
+        generateButton.style.display = 'block';
+        generateButton.style.margin = '10px';
+        inputContainer.appendChild(generateButton);
+    
+        // Container for numbers
+        const numberContainer = document.createElement('div');
+        document.body.appendChild(numberContainer);
+    
+        let n;
+    
+        inputNumber.addEventListener('input', e => {
+            if (e.target.value) {
+                n = e.target.value;
+            } else {
+                alert('Please enter a number');
+            }
+        })
+    
+        generateButton.addEventListener('click', e => {
+            let numberElement;
+    
+            // Clear previous numbers
+            numberContainer.innerHTML = '';
+    
+            for (let i = 0; i <= n; i++) {
+                numberElement = document.createElement('div');
+                numberElement.textContent = i;
+                numberElement.style.display = 'inline-block';
+                numberElement.style.width = '50px';
+                numberElement.style.height = '50px';
+                numberElement.style.textAlign = 'center';
+                numberElement.style.margin = '5px';
+                numberElement.style.border = '1px solid black';
+                if (i % 2 === 0) {
+                    numberElement.style.backgroundColor = 'green';
+                } else {
+                    if (i === 0 || i === 1) {
+                        numberElement.style.backgroundColor = 'yellow';
+                    } else {
+                        let isPrime = true;
+                        for (let j = 2; j < i; j++) {
+                            if (i % j === 0) {
+                                isPrime = false;
+                                break;
+                            }
+                        }
+                        if (isPrime) {
+                            numberElement.style.backgroundColor = 'red';
+                        } else {
+                            numberElement.style.backgroundColor = 'yellow';
+                        }
+                    }
+                }
+                numberContainer.appendChild(numberElement);
+            }
+        })
+    </script>
+    
+    
+    
+  </body>
+
+</html>
